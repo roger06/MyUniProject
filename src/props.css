@@ -1,0 +1,8 @@
+/* just a quick test for styling a component
+(Interface.tsx)
+*/
+
+li {
+  list-style: none;
+  color: blueviolet;
+}

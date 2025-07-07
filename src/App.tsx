@@ -6,8 +6,14 @@ import ListGroupConditional from "./components/ListGroupConditional";
 import ListGroupConditionalFunction from "./components/ListGroupConditionalFunction";
 import ClickEvent from "./components/ClickEvents";
 import ClickEventHandler from "./components/ClickEventsHandler"; 
+import ClickEventHandlerActive from "./components/ClickEventsHandlerActive";
+import Counter from "./components/Counter";
+import Interface from "./components/Interface";
 
 function App() {
+  // moved from components/Interface.tsx
+  let items = ["Copland", "Phobos", "Beneteau", "Moody", "Dufour", "Jeanneau", "X-Yachts", "Bavaria", "Lagoon", "Catana"];
+
   return  (
 
 
@@ -20,6 +26,10 @@ function App() {
   <ListGroupConditionalFunction></ListGroupConditionalFunction>
   <ClickEvent/> */}
   <ClickEventHandler/>
+  <ClickEventHandlerActive/>
+    <Counter/>
+    <Interface items={items} heading="Boats"/>
+
   </div>
 
   )
