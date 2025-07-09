@@ -14,7 +14,8 @@ import InterfaceWithFunction from "./components/InterfaceWithFunction";
 import Alert from "./components/Alert";
 import ButtonAlert from "./components/ButtonAlert";
 import { useState } from "react";
-
+// Importing an image
+import hadleyim from "./hadley-henry-itchenor.jpg"; // Adjust the path as necessary
 
 function App() {
   // moved from components/Interface.tsx
@@ -39,6 +40,22 @@ function App() {
     console.log;
   };
 
+  function handleClick() {
+    console.log("Clicked" + alertVisible); 
+
+    if (alertVisible) {
+      setAlertVis(false);   
+  }
+    else {  
+      setAlertVis(true);  
+    } 
+
+    // setAlertVis ? setAlertVis(false) :  setAlertVis(true)     ; // toggle visibility
+
+  }
+
+
+
   return (
     <div>
       {/* <ListGroup></ListGroup> */}
@@ -55,9 +72,11 @@ function App() {
       {/* <Alert>hello <strong>there</strong>!</Alert> */}
         { alertVisible &&   <Alert>My Alert</Alert>}
 
-        {/* <ButtonAlert color="warning" onClick={() => console.log("clicked")} >button</ButtonAlert> */}
-        <ButtonAlert color="warning" onClick={() => setAlertVis(true)} >button</ButtonAlert>
-
+        <ButtonAlert color="warning" onClick={() => handleClick()} >button</ButtonAlert>
+        {/* <ButtonAlert color="warning" onClick={() => setAlertVis(true)} >button</ButtonAlert> */}
+       
+        <p><img src={hadleyim} alt="hadley and henry" width={300} /></p>
+        
     </div>
   );
 }
